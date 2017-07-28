@@ -1,0 +1,56 @@
+
+body{
+
+background-image: url("http://4.bp.blogspot.com/-sjJ3zdrfFuw/VD7txBCljPI/AAAAAAAAAm8/MvziG3Gz7zw/s1600/EQP%2BPadr%C3%A3o%2BUSS%2BMA1a.jpg");
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+h1{
+text-align: center;
+padding:30px 4px;
+color: #390e11;
+font-weight: 900;
+font-style: italic;
+font-size: 80px;
+margin: auto;
+text-shadow: 3px 3px #453f11;
+}
+
+.btn{
+background-image: url("http://wallpapercave.com/wp/wiIa2T7.jpg");
+color: #786a2b;
+border-style: dotted;
+border-width: 2px;
+font-style: italic;
+border-radius: 20px;
+padding: 30px 120px;
+margin-left: 350px;
+font-style: italic;
+}
+
+.row{
+padding: 200px 150px;
+border-style: dashed;
+margin-left: 40px;
+margin-right: 40px;
+margin-bottom: 20px;
+border-width: 5px;
+
+}
+
+div#questions{
+color: #a89d00;
+font-weight: 900;
+font-style: italic;
+font-size: 22px;
+}
+
+#timeLeft{
+color: white;
+
+
+}
+
+
