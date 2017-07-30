@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--links-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="trivia.css">
+	<meta charset="UTF-8">
+	<title>Trivia Game</title>
+	<!--header-->
+<h1><strong>Yoy`s M-16 Trivia...</strong></h1>
+</head>
+<body>
+<div id="time-left"></div>
+<!--box-->
+<div class="row">
+ <div class="col-md-12"></div>
+ <div id = "but">	
+<button id="button" class="btn btn-primary btn-lg"><strong>START</strong></button>
+
+<div id="questions">
+
+<span id = "Q1"></span><br>
+<br>
+  <input type="radio" name="Q1" id="rdn" value="false">
+</label><span id = "q1answer-0"></span><br>
+  <input type="radio" name="Q1" id="rdn" value="true"> 
+</label><span id = "q1answer-1"></span><br>
+  <input type="radio" name="Q1" id="rdn" value="false"> 
+</label><span id = "q1answer-2"></span><br>
+  <input type="radio" name="Q1" id="rdn" value="false"> 
+</label><span id = "q1answer-3"></span><br>
+<br>
+<span id = "Q2"></span><br>
+<br>
+ <input type="radio" name="Q2" id="rdn" value="false"> 
+</label><span id = "q2answer-0"></span><br>
+ <input type="radio" name="Q2" id="rdn" value="false"> 
+</label><span id = "q2answer-1"></span><br>
+ <input type="radio" name="Q2" id="rdn" value="false"> 
+</label><span id = "q2answer-2"></span><br>
+ <input type="radio" name="Q2" id="rdn" value="true"> 
+</label><span id = "q2answer-3"></span><br>
+<br>
+<span id = "Q3"></span><br><br>
+ <input type="radio" name="Q3" id="rdn" value="false"> 
+</label><span id = "q3answer-0"></span><br>
+ <input type="radio" name="Q3" id="rdn" value="false"> 
+</label><span id = "q3answer-1"></span><br>
+ <input type="radio" name="Q3" id="rdn" value="false"> 
+</label><span id = "q3answer-2"></span><br>
+ <input type="radio" name="Q3" id="rdn" value="true"> 
+</label><span id = "q3answer-3"></span><br>
+<br>
+<span id = "Q4"></span><br>
+<br>
+ <input type="radio" name="Q4" id="rdn" value="false"> 
+</label><span id = "q4answer-0"></span><br>
+ <input type="radio" name="Q4" id="rdn" value="true"> 
+</label><span id = "q4answer-1"></span><br>
+ <input type="radio" name="Q4" id="rdn" value="false"> 
+</label><span id = "q4answer-2"></span><br>
+ <input type="radio" name="Q4" id="rdn" value="false"> 
+</label><span id = "q4answer-3"></span><br>
+
+</div>
+ </div>
+
+<script>
+
+ var Q1;
+ var Q2;
+ var Q2;
+ var Q3;
+ var trackTime;
+ var userGuessq1;
+ var userGuessq2;
+ var userGuessq3;
+ var userGuessq4;
+  var timeLeft = 30;
+  var questions = [
+	{
+       question: "Which company manufacured the M-16?",
+       answer: ["winchester", "colt", "smith&wesson", "browing"],
+       correct: "colt"
+   },
+   {
+       question: "How long is the M-16 (not any of the newer versions from butt to tip?",
+       answer: ["88 cm.", "93 cm.", "1.11 m.", "99 cm."],
+       correct: "99 cm."
+   },
+   {
+
+       question: "What caliber (bore) bullet does the M-16 fire?",
+       answer: [" 7.62 mm", "0.3 in", "0.5 in", "5.56 mm"],
+       correct: "5.56 mm"
+   },
+   {
+
+       question: "What is the maximum rate of fire for the M-16A1?",
+       answer: [" 550 rpm", "750 rpm", "65 rpm", "200 rpm"],
+       correct: "750 rpm"
+
+   }];
+
+
+$("#questions").hide();
+$("#button").click(function(){
+		$("#radio").hide();
+			$("#button").hide();
+			$("#questions").show();
+ showQuestions();
+ showAnswers();
+setTimeout("timeUp", 30000);
+trackTime = setInterval  (function() {
+console.log(timeLeft);
+timeLeft --
+
+$("#time-left").html("<h2>"+timeLeft+"</h2>");
+if (timeLeft===0) { 
+clearInterval(trackTime);
+timeUp();
+
+ }
+}, 1000)
+
+
+});
+
+     
+function showQuestions() {
+	$("#Q1").html(questions[0].question);
+	$("#Q2").html(questions[1].question);
+	$("#Q3").html(questions[2].question);
+	$("#Q4").html(questions[3].question);
+}
+
+function showAnswers() {
+	$("#q1answer-0").html(questions[0].answer[0]);
+	$("#q1answer-1").html(questions[0].answer[1]);
+	$("#q1answer-2").html(questions[0].answer[2]);
+	$("#q1answer-3").html(questions[0].answer[3]);
+	$("#q2answer-0").html(questions[1].answer[0]);
+	$("#q2answer-1").html(questions[1].answer[1]);
+	$("#q2answer-2").html(questions[1].answer[2]);
+	$("#q2answer-3").html(questions[1].answer[3]);
+	$("#q3answer-0").html(questions[2].answer[0]);
+	$("#q3answer-1").html(questions[2].answer[1]);
+	$("#q3answer-2").html(questions[2].answer[2]);
+	$("#q3answer-3").html(questions[2].answer[3]);
+	$("#q4answer-0").html(questions[3].answer[0]);
+	$("#q4answer-1").html(questions[3].answer[1]);
+	$("#q4answer-2").html(questions[3].answer[2]);
+	$("#q4answer-3").html(questions[3].answer[3]);
+	}
+
+function timeUp() {
+	  $("#time-left").append("<h2>All Done!</h2>");
+$("#questions").hide();
+check();
+}
+
+
+function check() {
+	userGuess = $("#rdn").checked 
+if  (userGuessq1.val() === questions[0].answer)
+	score++,
+	(userGuessq2.val() === questions[1].answer)
+	score++,
+	(userGuessq3.val() === questions[2].answer)
+	score++,
+	(userGuessq4.val() === questions[3].answer)
+	score++}
+	
+
+// $("#but").html("questions"); 
+
+//  var quiz = `<div class="row">`+
+//   `<div class="col-sm-12">`+
+//     `Level 1: .col-sm-12`+
+//     `<div class="row">`+
+//       `<div class="col-xs-8 col-sm-6">`+
+//         `Level 2: .col-xs-8 .col-sm-6`+
+//      `</div>`+
+//       `<div class="col-xs-4 col-sm-6">`+
+//         `Level 2: .col-xs-4 .col-sm-6`+
+//       `</div>`+
+//     `</div>`+
+//   `</div>`+
+// `</div>`+
+</script>
+</body>
+</html>
+
+
+ 
