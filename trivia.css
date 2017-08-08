@@ -1,0 +1,90 @@
+
+body{
+
+background-image: url("http://wallpapertvs.com/wp-content/uploads/2014/12/Army_Soldiers_Ready_For_Fire_Wallpaper.jpg");
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+h1{
+text-align: center;
+padding:30px 4px;
+color: #390e11;
+font-weight: 900;
+font-style: oblique;
+font-size: 80px;
+margin: auto;
+text-shadow: 3px 3px #453f11;
+}
+
+.btn{
+background-image: url("https://s-media-cache-ak0.pinimg.com/736x/76/a2/9d/76a29d3a83d4c2806fe7d7f3f42e9f1e--custom-guns-gun-safes.jpg");
+color: #45443a;
+border-style: solid;
+border-width: 10px;
+font-style: italic;
+border-radius: 50px;
+padding: 30px 120px;
+margin-left: 390px;
+font-style: italic;
+border-color: #595e22;
+text-shadow: 2px 2px #453f11;
+margin-top: 80px; 
+
+}
+
+.row{
+padding: 80px 80px;
+/*border-style: outset;
+*/margin-left: 60px;
+margin-right: 60px;
+margin-bottom: 20px;
+/*border-width: 5px;
+border-color: #453f11;*/
+
+}
+
+
+div#questions{
+font-weight: bold;
+font-size:20px; 
+color: #bd8a00;
+font-family: arial, sans-serif;
+padding: 8px 10px;
+width: 80%;
+text-shadow: 2px 2px #473400;
+float: center;
+margin-left: 140px;
+
+}
+
+h2{
+border-width: 10px;
+border-radius: 30px;
+border-color: #595e22;
+background-image: url("https://s-media-cache-ak0.pinimg.com/736x/76/a2/9d/76a29d3a83d4c2806fe7d7f3f42e9f1e--custom-guns-gun-safes.jpg");
+padding: 10px 10px;
+text-align: center;
+margin-left: 550px;
+margin-right: 550px;
+color: #fff;
+margin-bottom: 0px;
+border-style: solid;
+font-weight: bold;
+}
+
+#questions{
+background-image: url("https://cdn.shutterstock.com/shutterstock/videos/6271751/thumb/3.jpg?i10c=img.resize(height:160)");	
+background-size: cover;
+background-repeat: no-repeat;
+border-style: solid;
+margin-left: 550px;
+margin-right: 550px;
+padding: 10px 10px;
+text-align: center;
+border-width: 10px;
+border-radius: 30px;
+border-color: #595e22;
+
+}
